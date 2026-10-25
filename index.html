@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prisila Tapia Marca | Administración y Finanzas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf5ee; --sand:#efe4d4; --sand2:#e4d3bc; --tan:#c4a47c; --tan-d:#a98458;
+  --ink:#4a3b2e; --ink2:#7a6a5a; --sage:#8a9a74; --sage-l:#e3e9d9; --card:#ffffff;
+  --shadow:0 10px 30px rgba(120,90,55,.10);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif; --sans:'DM Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--cream:#2a231c;--sand:#342b22;--sand2:#463a2e;--tan:#cfae82;--tan-d:#e0c196;--ink:#f3e9db;--ink2:#c7b8a4;--sage:#a9b98f;--sage-l:#3a4130;--card:#362d24;--shadow:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
+}
+:root[data-theme="dark"]{--cream:#2a231c;--sand:#342b22;--sand2:#463a2e;--tan:#cfae82;--tan-d:#e0c196;--ink:#f3e9db;--ink2:#c7b8a4;--sage:#a9b98f;--sage-l:#3a4130;--card:#362d24;--shadow:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.7 var(--sans);overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,5.4vw,3.8rem)} h2{font-size:clamp(1.8rem,3.6vw,2.6rem);text-align:center} h3{font-size:1.25rem}
+p{margin:0 0 1em} a{color:inherit}
+:focus-visible{outline:2px solid var(--tan-d);outline-offset:3px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:88px 0}
+.sub{max-width:560px;margin:0 auto 48px;text-align:center;color:var(--ink2)}
+.btn{display:inline-block;background:var(--tan);color:#fff;border:0;border-radius:999px;padding:14px 30px;font:600 .95rem var(--sans);cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{background:var(--tan-d);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--tan)}
+.btn.ghost:hover{background:var(--sand)}
+.pill{display:inline-block;background:var(--sage-l);color:var(--ink);border-radius:999px;padding:6px 16px;font-size:.85rem;font-weight:500}
+
+/* top bar + nav */
+.top{background:var(--tan);color:#fff;text-align:center;font-size:.8rem;padding:6px 10px}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--cream) 88%,transparent);backdrop-filter:blur(10px);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 4px 20px rgba(120,90,55,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:1.3rem;text-decoration:none;letter-spacing:.04em}
+.logo small{display:block;font:500 .6rem var(--sans);letter-spacing:.22em;color:var(--ink2);margin-top:-4px}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{text-decoration:none;font-size:.9rem;color:var(--ink2);position:relative;padding:4px 0}
+.menu a.on,.menu a:hover{color:var(--ink)}
+.menu a.on::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--tan);border-radius:2px}
+.tools{display:flex;gap:10px;align-items:center}
+.ic{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--sand2);background:transparent;color:var(--ink);cursor:pointer;font-size:1rem}
+.burger{display:none}
+
+/* hero */
+.hero{padding:56px 0 100px;background:radial-gradient(circle at 80% 20%,var(--sand) 0,transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero p.lead{color:var(--ink2);font-size:1.1rem;max-width:520px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.arch{position:relative;aspect-ratio:4/5;max-width:420px;margin-inline:auto;width:100%}
+.arch .frame{position:absolute;inset:0;border-radius:999px 999px 28px 28px;background:linear-gradient(160deg,var(--sand2),var(--sand));overflow:hidden;box-shadow:var(--shadow);display:grid;place-items:center}
+.arch .mono{font:500 clamp(5rem,12vw,8rem)/1 var(--serif);color:var(--tan-d);letter-spacing:.04em}
+.arch .frame::after{content:"";position:absolute;inset:14px;border:1.5px solid color-mix(in srgb,var(--tan) 60%,transparent);border-radius:999px 999px 18px 18px}
+.leaf{position:absolute;width:110px;right:-24px;top:-14px;transform-origin:bottom left;animation:sway 6s ease-in-out infinite}
+.badge{position:absolute;left:-18px;bottom:36px;background:var(--card);border-radius:18px;padding:12px 18px;box-shadow:var(--shadow);font-size:.85rem}
+.badge b{display:block;font:500 1.4rem var(--serif)}
+@keyframes sway{50%{transform:rotate(7deg)}}
+
+/* feature cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border-radius:20px;padding:28px 24px;box-shadow:var(--shadow);transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.card .ico{width:46px;height:46px;border-radius:50%;background:var(--sage-l);display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px}
+.card p{color:var(--ink2);font-size:.93rem;margin:0}
+.hero-cards{margin-top:-60px;position:relative;z-index:2}
+.quote{text-align:center;padding:56px 0 8px}
+.quote p{font:italic 400 clamp(1.15rem,2.4vw,1.5rem)/1.5 var(--serif);max-width:720px;margin:0 auto 22px;color:var(--ink2)}
+
+/* about */
+.about{background:var(--sand)}
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.about h2{text-align:left}
+.note{border-left:3px solid var(--tan);padding:4px 0 4px 18px;margin:20px 0;font-family:var(--serif);font-style:italic;color:var(--ink2)}
+.credit{display:flex;gap:14px;align-items:center;background:var(--card);border-radius:16px;padding:16px 20px;box-shadow:var(--shadow)}
+.credit span{font-size:1.6rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+.stat{background:var(--card);border-radius:20px;padding:30px 12px;box-shadow:var(--shadow)}
+.stat b{display:block;font:500 clamp(2rem,4vw,2.8rem)/1 var(--serif);color:var(--tan-d)}
+.stat span{font-size:.88rem;color:var(--ink2)}
+
+/* timeline */
+.tl{max-width:820px;margin:0 auto;position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--sand2)}
+.job{position:relative;background:var(--card);border-radius:18px;margin-bottom:16px;box-shadow:var(--shadow)}
+.job::before{content:"";position:absolute;left:-33px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--cream);border:3px solid var(--tan)}
+.job.open::before{background:var(--tan)}
+.job button{all:unset;box-sizing:border-box;width:100%;padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.job button:focus-visible{outline:2px solid var(--tan-d);border-radius:18px}
+.job h3{margin:0;font-size:1.1rem}
+.job small{color:var(--ink2)}
+.job .chev{transition:transform .3s;color:var(--tan-d);font-size:1.2rem}
+.job.open .chev{transform:rotate(180deg)}
+.job .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}
+.job.open .body{grid-template-rows:1fr}
+.job .body>div{overflow:hidden;padding:0 24px}
+.job.open .body>div{padding-bottom:20px}
+.job .body p{color:var(--ink2);font-size:.93rem;margin:0}
+
+/* skills + edu */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two h3{margin-bottom:22px}
+.bar{margin-bottom:18px}
+.bar div:first-child{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px}
+.track{height:8px;background:var(--sand2);border-radius:8px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--sage),var(--tan));border-radius:8px;transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+.edu{background:var(--card);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow);margin-bottom:14px;display:flex;gap:14px}
+.edu .yr{flex:none;background:var(--sage-l);border-radius:12px;padding:6px 12px;font-size:.78rem;font-weight:600;height:fit-content}
+.edu h4{margin:0 0 2px;font:500 1rem var(--serif)} .edu p{margin:0;font-size:.87rem;color:var(--ink2)}
+
+/* contact */
+.contact{background:var(--sand)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact h2{text-align:left}
+.line{display:flex;gap:12px;align-items:center;margin:14px 0;text-decoration:none}
+form{background:var(--card);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+label{display:block;font-size:.85rem;font-weight:500;margin-bottom:14px}
+input,select,textarea{width:100%;margin-top:6px;padding:12px 14px;border:1.5px solid var(--sand2);border-radius:12px;background:var(--cream);color:var(--ink);font:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--tan)}
+.msg{margin-top:12px;font-size:.9rem;color:var(--sage);min-height:1.4em}
+footer{text-align:center;padding:34px 0;color:var(--ink2);font-size:.85rem}
+.up{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .3s;background:var(--tan);color:#fff;border:0;z-index:40}
+.up.show{opacity:1;pointer-events:auto}
+
+/* único movimiento de entrada */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero .wrap,.about .wrap,.contact .wrap,.two{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr} .stats{grid-template-columns:1fr 1fr}
+  .about h2,.contact h2{text-align:center}
+  .arch{max-width:320px}
+}
+@media (max-width:720px){
+  .burger{display:inline-block}
+  .menu{position:fixed;inset:calc(68px + env(safe-area-inset-top,0px)) 0 auto 0;background:var(--cream);flex-direction:column;padding:24px;gap:18px;box-shadow:0 14px 24px rgba(0,0,0,.1);transform:translateY(-130%);transition:transform .35s;z-index:-1}
+  .menu.open{transform:none}
+  .cards{grid-template-columns:1fr} section{padding:64px 0}
+  .hero-cards{margin-top:-40px} .badge{left:0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="top">Finanzas claras para empresas que quieren crecer</div>
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#inicio">PRISILA TAPIA<small>ADMINISTRACIÓN &amp; FINANZAS</small></a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#inicio">Inicio</a><a href="#servicios">Qué hago</a><a href="#sobre-mi">Sobre mí</a>
+      <a href="#trayectoria">Trayectoria</a><a href="#formacion">Formación</a><a href="#contacto">Contacto</a>
+    </nav>
+    <div class="tools">
+      <button class="ic" id="theme" aria-label="Cambiar entre modo claro y oscuro">☾</button>
+      <button class="ic burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="pill">MBA en Finanzas Corporativas · PUCP</span>
+      <h1 style="margin-top:18px">Tu empresa no necesita más reportes. Necesita un plan financiero hecho para ella.</h1>
+      <p class="lead">Soy Prisila, contadora pública colegiada con 12 años en gestión administrativa y finanzas. Convierto la contabilidad y la tributación en planes anuales que proyectan crecimiento.</p>
+      <div class="cta"><a class="btn" href="#contacto">Agenda una conversación</a><a class="btn ghost" href="#trayectoria">Ver mi trayectoria</a></div>
+    </div>
+    <div class="arch" aria-hidden="true">
+      <svg class="leaf" viewBox="0 0 100 120" fill="none"><path d="M10 115C10 60 40 20 90 5c4 50-20 95-80 110Z" fill="#8a9a74" opacity=".85"/><path d="M12 112C35 70 55 40 85 10" stroke="#faf5ee" stroke-width="2"/></svg>
+      <div class="frame"><span class="mono">PT</span></div>
+      <div class="badge"><b>12 años</b>en administración y finanzas</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap hero-cards">
+  <div class="cards">
+    <div class="card"><div class="ico">📊</div><h3>Planes anuales con proyección</h3><p>Presupuestos y metas financieras alineadas al crecimiento de tu empresa.</p></div>
+    <div class="card"><div class="ico">🧾</div><h3>Contabilidad y tributación</h3><p>Orden contable y cumplimiento tributario sin sorpresas al cierre de mes.</p></div>
+    <div class="card"><div class="ico">🧭</div><h3>Gestión por proyectos</h3><p>Enfoque PMI para planificar, medir y entregar a tiempo.</p></div>
+  </div>
+  <div class="quote rv"><p>Un buen plan financiero no se copia: se diseña a la medida del negocio y de las personas que lo mueven.</p><a class="btn" href="#servicios">Conoce cómo trabajo</a></div>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <h2 class="rv">Un acompañamiento que va más allá de los números</h2>
+    <p class="sub rv">Seis áreas donde aporto orden, criterio y visión de largo plazo.</p>
+    <div class="cards">
+      <div class="card rv"><div class="ico">🏦</div><h3>Finanzas corporativas</h3><p>Análisis de liquidez, estructura de capital y decisiones de inversión respaldadas por datos.</p></div>
+      <div class="card rv"><div class="ico">📒</div><h3>Contabilidad integral</h3><p>Registros, estados financieros y control interno con experiencia desde analista hasta jefatura.</p></div>
+      <div class="card rv"><div class="ico">⚖️</div><h3>Tributación</h3><p>Planificación tributaria para reducir riesgos y cumplir en tiempo y forma.</p></div>
+      <div class="card rv"><div class="ico">📈</div><h3>Planeamiento y presupuesto</h3><p>Proyecciones anuales con escenarios y seguimiento mensual de desvíos.</p></div>
+      <div class="card rv"><div class="ico">👥</div><h3>Gestión administrativa</h3><p>Procesos, equipos y proveedores coordinados para que la operación fluya.</p></div>
+      <div class="card rv"><div class="ico">🌐</div><h3>Marketing digital y e-commerce</h3><p>Diplomado en E-commerce y Marketing Digital para conectar finanzas con ventas online.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre-mi">
+  <div class="wrap">
+    <div class="arch rv" aria-hidden="true"><div class="frame"><span class="mono">PT</span></div></div>
+    <div class="rv">
+      <h2>Hola, soy Prisila</h2>
+      <p>Soy Sub Gerente de Administración y Finanzas en C&amp;R Integral Service S.A.C. Empecé como asistente de contabilidad y fui creciendo hasta liderar el área, entendiendo cada etapa del proceso financiero desde adentro.</p>
+      <div class="note">Mi enfoque: planes anuales realistas, con proyección a crecimiento empresarial.</div>
+      <p>Hoy sumo la mirada de gestión de proyectos con enfoque PMI para que cada decisión financiera tenga un plan claro de ejecución.</p>
+      <div class="credit"><span>🎓</span><div><b>MBA, Finanzas · PUCP</b><br><small>Contadora Pública Colegiada · Programa Women CEO, CENTRUM PUCP</small></div></div>
+      <div class="tags"><span class="pill">Finanzas corporativas</span><span class="pill">Contabilidad</span><span class="pill">Tributación</span><span class="pill">Gestión PMI</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stats" id="stats">
+    <div class="stat"><b data-n="12" data-s="+">0</b><span>años en administración y finanzas</span></div>
+    <div class="stat"><b data-n="11" data-s="+">0</b><span>años en C&amp;R Integral Service</span></div>
+    <div class="stat"><b data-n="5">0</b><span>cargos con crecimiento progresivo</span></div>
+    <div class="stat"><b data-n="1">0</b><span>MBA en Finanzas Corporativas</span></div>
+  </div>
+</section>
+
+<section id="trayectoria" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="rv">Mi trayectoria</h2>
+    <p class="sub rv">Toca cada cargo para ver los detalles.</p>
+    <div class="tl">
+      <div class="job open"><button aria-expanded="true"><div><h3>Sub Gerente de Administración y Finanzas</h3><small>C&amp;R Integral Service S.A.C. · Ene 2025 – Presente</small></div><span class="chev">⌄</span></button><div class="body"><div><p>Lidero la estrategia administrativa y financiera de la empresa, con planes anuales orientados al crecimiento y apoyo directo a la gerencia en la toma de decisiones.</p></div></div></div>
+      <div class="job"><button aria-expanded="false"><div><h3>Jefe Administrativo y Financiero</h3><small>C&amp;R Integral Service S.A.C. · Jul 2019 – May 2025</small></div><span class="chev">⌄</span></button><div class="body"><div><p>Dirigí las áreas de administración, contabilidad y finanzas durante casi seis años, consolidando procesos, control presupuestal y cumplimiento tributario.</p></div></div></div>
+      <div class="job"><button aria-expanded="false"><div><h3>Analista de Contabilidad</h3><small>C&amp;R Integral Service S.A.C. · Ene 2015 – Jun 2019</small></div><span class="chev">⌄</span></button><div class="body"><div><p>Responsable del análisis contable, registros y reportes que sostuvieron el crecimiento de la empresa.</p></div></div></div>
+      <div class="job"><button aria-expanded="false"><div><h3>Asistente de Contabilidad</h3><small>Cámara de Comercio de Lima · Ene – Dic 2014</small></div><span class="chev">⌄</span></button><div class="body"><div><p>Apoyo en procesos contables de una de las instituciones gremiales más importantes del país.</p></div></div></div>
+      <div class="job"><button aria-expanded="false"><div><h3>Asistente de Contabilidad</h3><small>Tech Data Perú · Abr – Dic 2013</small></div><span class="chev">⌄</span></button><div class="body"><div><p>Primera experiencia profesional en contabilidad dentro de una empresa de tecnología.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="formacion" style="background:var(--sand)">
+  <div class="wrap two">
+    <div>
+      <h3>Competencias</h3>
+      <div class="bar"><div><span>Finanzas corporativas</span><span>95%</span></div><div class="track"><div class="fill" data-w="95"></div></div></div>
+      <div class="bar"><div><span>Contabilidad</span><span>95%</span></div><div class="track"><div class="fill" data-w="95"></div></div></div>
+      <div class="bar"><div><span>Tributación</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+      <div class="bar"><div><span>Gestión administrativa</span><span>92%</span></div><div class="track"><div class="fill" data-w="92"></div></div></div>
+      <div class="bar"><div><span>Gestión de proyectos (PMI)</span><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+      <div class="bar"><div><span>Inglés intermedio</span><span>65%</span></div><div class="track"><div class="fill" data-w="65"></div></div></div>
+    </div>
+    <div>
+      <h3>Formación</h3>
+      <div class="edu"><span class="yr">2021–23</span><div><h4>Maestría en Administración de Negocios</h4><p>Finanzas · Pontificia Universidad Católica del Perú</p></div></div>
+      <div class="edu"><span class="yr">2024</span><div><h4>Curso PMP, Gestión de proyectos</h4><p>BSG Institute</p></div></div>
+      <div class="edu"><span class="yr">Women CEO</span><div><h4>Certificación en Liderazgo Organizacional</h4><p>CENTRUM PUCP</p></div></div>
+      <div class="edu"><span class="yr">2017</span><div><h4>Diplomado en E-commerce y Marketing Digital</h4><p>Centro de Capacitación Empresarial · CCL</p></div></div>
+      <div class="edu"><span class="yr">2019</span><div><h4>Inglés intermedio</h4><p>ICPNA</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Conversemos sobre tu plan</h2>
+      <p style="color:var(--ink2)">Cuéntame qué necesita tu empresa y te responderé a la brevedad.</p>
+      <a class="line" href="mailto:prisilatapiam@gmail.com"><span class="ico card" style="padding:0;width:44px;height:44px;display:grid;place-items:center;border-radius:50%">✉️</span>prisilatapiam@gmail.com</a>
+      <a class="line" href="https://www.linkedin.com/in/prisila-tapiamarca-745baabb" target="_blank" rel="noopener"><span class="ico card" style="padding:0;width:44px;height:44px;display:grid;place-items:center;border-radius:50%">in</span>LinkedIn: prisila-tapiamarca</a>
+      <div class="line"><span class="ico card" style="padding:0;width:44px;height:44px;display:grid;place-items:center;border-radius:50%">📍</span>Perú</div>
+    </div>
+    <form id="form" class="rv" novalidate>
+      <label>Nombre<input id="n" required autocomplete="name"></label>
+      <label>Correo<input id="e" type="email" required autocomplete="email"></label>
+      <label>¿En qué te puedo ayudar?<select id="t"><option>Planeamiento financiero</option><option>Contabilidad y tributación</option><option>Gestión administrativa</option><option>Otro tema</option></select></label>
+      <label>Mensaje<textarea id="m" rows="4" required></textarea></label>
+      <button class="btn" type="submit">Enviar mensaje</button>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="y"></span> Prisila Tapia Marca · Administración y Finanzas</footer>
+<button class="ic up" id="up" aria-label="Volver arriba">↑</button>
+
+<script>
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+$('#y').textContent=new Date().getFullYear();
+
+/* header, volver arriba */
+const hdr=$('#hdr'),up=$('#up');
+addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',scrollY>10);up.classList.toggle('show',scrollY>600)},{passive:true});
+up.onclick=()=>scrollTo({top:0});
+
+/* menú móvil */
+const menu=$('#menu'),burger=$('#burger');
+burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.textContent=o?'✕':'☰'};
+$$('a',menu).forEach(a=>a.onclick=()=>{menu.classList.remove('open');burger.textContent='☰';burger.setAttribute('aria-expanded',false)});
+
+/* modo claro/oscuro */
+const root=document.documentElement,tb=$('#theme');
+const dark=()=>root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+const sync=()=>tb.textContent=dark()?'☀':'☾';sync();
+tb.onclick=()=>{root.dataset.theme=dark()?'light':'dark';sync()};
+
+/* enlace activo */
+const links=$$('.menu a'),secs=links.map(a=>$(a.getAttribute('href')));
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>s&&spy.observe(s));
+
+/* revelado, contadores y barras */
+const count=el=>{const n=+el.dataset.n,s=el.dataset.s||'';let t0;const f=t=>{t0??=t;const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(p===1?s:'');p<1&&requestAnimationFrame(f)};requestAnimationFrame(f)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;
+  t.classList.add('in');
+  if(t.id==='stats')$$('[data-n]',t).forEach(count);
+  if(t.classList.contains('two'))$$('.fill',t).forEach(f=>f.style.width=f.dataset.w+'%');
+  io.unobserve(t)}),{threshold:.2});
+$$('.rv,#stats,.two').forEach(el=>io.observe(el));
+
+/* línea de tiempo desplegable */
+$$('.job button').forEach(b=>b.onclick=()=>{const j=b.parentElement,o=!j.classList.contains('open');
+  $$('.job').forEach(x=>{x.classList.remove('open');$('button',x).setAttribute('aria-expanded',false)});
+  j.classList.toggle('open',o);b.setAttribute('aria-expanded',o)});
+
+/* formulario → correo */
+$('#form').onsubmit=e=>{e.preventDefault();const n=$('#n').value.trim(),c=$('#e').value.trim(),m=$('#m').value.trim(),msg=$('#msg');
+  if(!n||!/^\S+@\S+\.\S+$/.test(c)||!m){msg.style.color='#b0573d';msg.textContent='Completa tu nombre, un correo válido y tu mensaje.';return}
+  const body=`Hola Prisila, soy ${n} (${c}).\n\nTema: ${$('#t').value}\n\n${m}`;
+  msg.style.color='';msg.textContent='Abriendo tu aplicación de correo…';
+  location.href=`mailto:prisilatapiam@gmail.com?subject=${encodeURIComponent('Consulta desde tu sitio web')}&body=${encodeURIComponent(body)}`};
+</script>
+</body>
+</html>
